@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlogAPI.GenericRepository;
 
 namespace BlogAPI.Controllers
 {
@@ -14,11 +15,23 @@ namespace BlogAPI.Controllers
     public class PostController : ControllerBase
     {
         private BlogDbContext DB = new BlogDbContext();
+        private IGenericRepository<TblPost> repository = null;
+        public PostController()
+        {
+            this.repository = new GenericRepository<TblPost>();
+        }
+        //Multiple constructors accepting all given argument types have been found
+        //Although there are a constructor without argument and a constructor have argument
+        //public PostController(IGenericRepository<TblPost> repository)
+        //{
+        //    this.repository = repository;
+        //}
         [HttpGet]
         [Route("GetAllPosts")]
         public List<TblPost> GetAllPosts()
         {
-            return DB.TblPost.ToList();
+            List<TblPost> Posts = (List<TblPost>)repository.GetAll();
+            return Posts;
         }
 
         [HttpGet]

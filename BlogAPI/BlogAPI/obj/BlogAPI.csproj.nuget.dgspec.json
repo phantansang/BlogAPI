@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SANG IT\\source\\repos\\BlogAPI\\BlogAPI\\BlogAPI.csproj": {}
+    "D:\\PROJECT\\BlogAPI\\BlogAPI\\BlogAPI\\BlogAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SANG IT\\source\\repos\\BlogAPI\\BlogAPI\\BlogAPI.csproj": {
+    "D:\\PROJECT\\BlogAPI\\BlogAPI\\BlogAPI\\BlogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SANG IT\\source\\repos\\BlogAPI\\BlogAPI\\BlogAPI.csproj",
+        "projectUniqueName": "D:\\PROJECT\\BlogAPI\\BlogAPI\\BlogAPI\\BlogAPI.csproj",
         "projectName": "BlogAPI",
-        "projectPath": "C:\\Users\\SANG IT\\source\\repos\\BlogAPI\\BlogAPI\\BlogAPI.csproj",
+        "projectPath": "D:\\PROJECT\\BlogAPI\\BlogAPI\\BlogAPI\\BlogAPI.csproj",
         "packagesPath": "C:\\Users\\SANG IT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SANG IT\\source\\repos\\BlogAPI\\BlogAPI\\obj\\",
+        "outputPath": "D:\\PROJECT\\BlogAPI\\BlogAPI\\BlogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SANG IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
