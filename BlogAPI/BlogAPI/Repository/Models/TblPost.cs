@@ -7,8 +7,8 @@ using System.Collections.Generic;
 
 namespace BlogAPI.Repository.Models
 {
-    public partial class TblPost
-    {
+    public partial class TblPost {
+    
         public string PostId { get; set; }
         public string Title { get; set; }
         public string MetaTitle { get; set; }
