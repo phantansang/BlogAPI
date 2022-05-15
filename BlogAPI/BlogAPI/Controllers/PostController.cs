@@ -152,18 +152,60 @@ namespace BlogAPI.Controllers
                 {
                     TblPost PostToEdit = repository.GetById(model.PostId);
                     if (PostToEdit == null) return NotFound();
-                    PostToEdit.Title = model.Title;
-                    PostToEdit.MetaTitle = model.MetaTitle;
-                    PostToEdit.Category = model.Category;
-                    PostToEdit.Imagepath = model.Imagepath;
-                    PostToEdit.Description = model.Description;
-                    PostToEdit.Content = model.Content;
-                    PostToEdit.Status = model.Status;
-                    PostToEdit.LastUpdate = DateTime.Now;
-                    PostToEdit.Log += "<br/><i>" + DateTime.Now + "</i>: " + "Article edited by " + HttpContext.Items["CurrentUser"];
-                    repository.Update(PostToEdit);
-                    repository.Save();
-                    return Ok(new { Success = true, Data = PostToEdit });
+                    string Change = "";
+                    if(PostToEdit.Title != model.Title)
+                    {
+                        PostToEdit.Title = model.Title;
+                        Change += "Title";
+                    }
+                    if (PostToEdit.MetaTitle != model.MetaTitle)
+                    {
+                        PostToEdit.MetaTitle = model.MetaTitle;
+                        if(Change == "") Change += "MetaTitle";
+                        else Change += ", MetaTitle";
+                    }
+                    if (PostToEdit.Category != model.Category)
+                    {
+                        PostToEdit.Category = model.Category;
+                        if (Change == "") Change += "Category";
+                        else Change += ", Category";
+                    }
+                    if (PostToEdit.Imagepath != model.Imagepath)
+                    {
+                        PostToEdit.Imagepath = model.Imagepath;
+                        if (Change == "") Change += "Imagepath";
+                        else Change += ", Imagepath";
+                    }
+                    if (PostToEdit.Description != model.Description)
+                    {
+                        PostToEdit.Description = model.Description;
+                        if (Change == "") Change += "Description";
+                        else Change += ", Description";
+                    }
+                    if (PostToEdit.Content != model.Content)
+                    {
+                        PostToEdit.Content = model.Content;
+                        if (Change == "") Change += "Content";
+                        else Change += ", Content";
+                    }
+                    if (PostToEdit.Status != model.Status)
+                    {
+                        PostToEdit.Status = model.Status;
+                        if (Change == "") Change += "Status";
+                        else Change += ", Status";
+                    }
+                    if(Change!="")
+                    {
+                        PostToEdit.LastUpdate = DateTime.Now;
+                        PostToEdit.Log += "<br/><i>" + DateTime.Now + "</i>: " + "Article edited by " + HttpContext.Items["CurrentUser"] + " [<i>" + Change + "</i>]";
+                        repository.Update(PostToEdit);
+                        repository.Save();
+                        return Ok(new { Success = true, Data = PostToEdit });
+                    }
+                    else
+                    {
+                        return UnprocessableEntity(new { Success = false, Data = "No changes" });
+                    }
                 }
                 catch (Exception EX)
                 {
