@@ -5,10 +5,9 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace BlogAPI.Repository.Models
+namespace DataAcess.Entities
 {
     public partial class TblPost {
-    
         public string PostId { get; set; }
         public string Title { get; set; }
         public string MetaTitle { get; set; }

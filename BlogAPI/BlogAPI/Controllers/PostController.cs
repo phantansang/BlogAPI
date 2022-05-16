@@ -1,15 +1,16 @@
-﻿using BlogAPI.Repository.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BusinessLogic;
+using BusinessLogic.DTO;
+using BusinessLogic.GenericRepository;
+using DataAcess;
 using System.Threading.Tasks;
-using BlogAPI.GenericRepository;
-using System.Net.Http;
-using System.Web;
-using System.Net;
+using DataAcess.Entities;
+using AutoMapper;
 
 namespace BlogAPI.Controllers
 {
@@ -17,18 +18,10 @@ namespace BlogAPI.Controllers
     [Route("[controller]")]
     public class PostController : ControllerBase
     {
-        private BlogDbContext DB = new BlogDbContext();
-
-        private Boolean CheckLogin()
-        {
-            //Demo code
-            HttpContext.Items["CurrentUser"] = "ptsang";
-            return true;
-        }
-        private IGenericRepository<TblPost> repository = null;
+        private readonly IGenericRepository<TblPost> _repositoryPost;
         public PostController()
         {
-            this.repository = new GenericRepository<TblPost>();
+            this._repositoryPost = new GenericRepository<TblPost>();
         }
         //Multiple constructors accepting all given argument types have been found
         //Although there are a constructor without argument and a constructor have argument
@@ -36,11 +29,19 @@ namespace BlogAPI.Controllers
         //{
         //    this.repository = repository;
         //}
+        public Boolean CheckLoginStatus()
+        {
+            //To do something...
+            Boolean Status = true;
+            HttpContext.Items["CurrentUser"] = "ptsang";
+            return Status;
+        }
+
         [HttpGet]
         [Route("GetAllPosts")]
         public IActionResult GetAllPosts()
         {
-            List<TblPost> Posts = (List<TblPost>)repository.GetAll();
+            List<TblPost> Posts = (List<TblPost>)_repositoryPost.GetAll();
             return Ok(Posts);
         }
 
@@ -50,7 +51,7 @@ namespace BlogAPI.Controllers
         {
             try
             {
-                TblPost Result = repository.GetById(PostID);
+                TblPost Result = _repositoryPost.GetById(PostID);
                 if (Result != null) return Ok(Result);
                 else return NotFound();
             }
@@ -64,7 +65,7 @@ namespace BlogAPI.Controllers
         [Route("GetPostsByDateRange")]
         public List<TblPost> GetPostsByDateRange(string From, string To)
         {
-            List<TblPost> Result = (List<TblPost>)repository.GetAll();
+            List<TblPost> Result = (List<TblPost>)_repositoryPost.GetAll();
             return Result.Where(P => DateTime.Compare((DateTime)P.CreateTime, DateTime.Parse(From)) >= 0 && DateTime.Compare((DateTime)P.CreateTime, DateTime.Parse(To)) <= 0).ToList();
         }
 
@@ -78,8 +79,8 @@ namespace BlogAPI.Controllers
             string PostID = CateID;
             do
             {
-                PostID += string.Format("{0:000#}", DB.TblPost.Count());
-            } while (DB.TblPost.Any(P => P.PostId == PostID));
+                PostID += string.Format("{0:000#}", _repositoryPost.GetAll().Where(R=>R.Category == CateID).Count());
+            } while (_repositoryPost.GetAll().Any(P => P.PostId == PostID));
             return PostID;
         }
 
@@ -110,7 +111,9 @@ namespace BlogAPI.Controllers
         [Route("CreatePost")]
         public IActionResult CreatePost([FromBody] TblPost model)
         {
-            if (!CheckLogin()) return Unauthorized();
+             
+            
+            if (!CheckLoginStatus()) return Unauthorized();
             else
             {
                 try
@@ -130,8 +133,8 @@ namespace BlogAPI.Controllers
                         LastUpdate = DateTime.Now,
                         Log = "<i>" + DateTime.Now + "</i>: " + "Article created by " + model.Author
                     };
-                    repository.Insert(Post);
-                    repository.Save();
+                    _repositoryPost.Insert(Post);
+                    _repositoryPost.Save();
                     return Ok(new { Success = true, Data = Post });
                 }
                 catch (Exception EX)
@@ -145,12 +148,12 @@ namespace BlogAPI.Controllers
         [Route("UpdatePost")]
         public IActionResult UpdatePost([FromBody] TblPost model)
         {
-            if (!CheckLogin()) return Unauthorized();
+            if (!CheckLoginStatus()) return Unauthorized();
             else
             {
                 try
                 {
-                    TblPost PostToEdit = repository.GetById(model.PostId);
+                    TblPost PostToEdit = _repositoryPost.GetById(model.PostId);
                     if (PostToEdit == null) return NotFound();
                     string Change = "";
                     if(PostToEdit.Title != model.Title)
@@ -198,8 +201,8 @@ namespace BlogAPI.Controllers
                     {
                         PostToEdit.LastUpdate = DateTime.Now;
                         PostToEdit.Log += "<br/><i>" + DateTime.Now + "</i>: " + "Article edited by " + HttpContext.Items["CurrentUser"] + " [<i>" + Change + "</i>]";
-                        repository.Update(PostToEdit);
-                        repository.Save();
+                        _repositoryPost.Update(PostToEdit);
+                        _repositoryPost.Save();
                         return Ok(new { Success = true, Data = PostToEdit });
                     }
                     else

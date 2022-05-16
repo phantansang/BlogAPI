@@ -71,8 +71,6 @@ D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BlogAPI.runtimeconfig
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BlogAPI.runtimeconfig.dev.json
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BlogAPI.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BlogAPI.pdb
-D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
-D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -99,7 +97,6 @@ D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityMod
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
@@ -128,3 +125,10 @@ D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.csproj.CopyCo
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.dll
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.pdb
 D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\obj\Debug\netcoreapp3.1\BlogAPI.genruntimeconfig.cache
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BusinessLogic.dll
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\DataAcess.dll
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\BusinessLogic.pdb
+D:\PROJECT\BlogAPI\BlogAPI\BlogAPI\bin\Debug\netcoreapp3.1\DataAcess.pdb

@@ -1,0 +1,13 @@
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\bin\Debug\netcoreapp3.1\DataAcess.deps.json
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\bin\Debug\netcoreapp3.1\DataAcess.runtimeconfig.json
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\bin\Debug\netcoreapp3.1\DataAcess.runtimeconfig.dev.json
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\bin\Debug\netcoreapp3.1\DataAcess.dll
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\bin\Debug\netcoreapp3.1\DataAcess.pdb
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.csproj.AssemblyReference.cache
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.AssemblyInfoInputs.cache
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.AssemblyInfo.cs
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.csproj.CoreCompileInputs.cache
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.dll
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.pdb
+D:\PROJECT\BlogAPI\BlogAPI\DataAcess\obj\Debug\netcoreapp3.1\DataAcess.genruntimeconfig.cache

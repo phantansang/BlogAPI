@@ -1,0 +1,13 @@
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.deps.json
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.dll
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.pdb
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\bin\Debug\netcoreapp3.1\DataAcess.dll
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\bin\Debug\netcoreapp3.1\DataAcess.pdb
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.AssemblyReference.cache
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.AssemblyInfoInputs.cache
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.AssemblyInfo.cs
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.CopyComplete
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.dll
+D:\PROJECT\BlogAPI\BlogAPI\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.pdb
